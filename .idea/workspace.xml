@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="648c13e7-2b2a-4c2b-b237-ab549be94af9" name="Default Changelist" comment="" />
+    <list default="true" id="648c13e7-2b2a-4c2b-b237-ab549be94af9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/CompoundIcon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/MainPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/MapElementsRepresentation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/VisualMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initialArguments.json" beforeDir="false" afterPath="$PROJECT_DIR$/initialArguments.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/Energy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/Evolution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/Genotype.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/Grass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/IMapElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/IPositionChangeObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/IWorldMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/Jungle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/MapDirection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/MapVisualizer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/MoveDirection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/OptionsParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/Vector2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/World.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/WorldMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/lab2.agh/AnimalTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/lab2.agh/GrassFieldTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/lab2.agh/Vector2DTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/lab2.agh/tests/MapDirectionTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Evolution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Evolution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Jungle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Jungle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/MoveDirection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/WorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WorldMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/AnimalTest.java" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,11 +64,14 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="package.json" />
-        <option value="Class" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -89,6 +126,32 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.World">
+    <configuration name="VisualMap$GridPaneMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.VisualMap$GridPaneMain" />
+      <module name="Evolution" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VisualMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.VisualMap" />
+      <module name="Evolution" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.World" />
       <module name="Evolution" />
@@ -112,26 +175,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GrassFieldTest.place" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Evolution" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GrassFieldTest" />
-      <option name="METHOD_NAME" value="place" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OptionsParserTest.parseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Evolution" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="OptionsParserTest" />
-      <option name="METHOD_NAME" value="parseTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RectangularMapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Evolution" />
       <option name="PACKAGE_NAME" value="" />
@@ -143,18 +186,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.World" />
+      <item itemvalue="Application.VisualMap$GridPaneMain" />
+      <item itemvalue="Application.VisualMap" />
       <item itemvalue="JUnit.RectangularMapTest" />
       <item itemvalue="JUnit.GrassFieldTest" />
-      <item itemvalue="JUnit.GrassFieldTest.place" />
-      <item itemvalue="JUnit.OptionsParserTest.parseTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.World" />
+        <item itemvalue="Application.VisualMap" />
+        <item itemvalue="Application.VisualMap$GridPaneMain" />
         <item itemvalue="JUnit.RectangularMapTest" />
         <item itemvalue="JUnit.GrassFieldTest" />
-        <item itemvalue="JUnit.OptionsParserTest.parseTest" />
-        <item itemvalue="JUnit.GrassFieldTest.place" />
       </list>
     </recent_temporary>
   </component>
@@ -186,10 +229,25 @@
       <workItem from="1576151310298" duration="6794000" />
       <workItem from="1576266999215" duration="49288000" />
       <workItem from="1576584568800" duration="911000" />
+      <workItem from="1576586200370" duration="5951000" />
+      <workItem from="1576614564177" duration="21532000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -35,7 +35,7 @@ MapVisualizer visualMap;
             animalsHash.put(animal.getPosition(),animal);
             animalList.add(animal);
             emptyFields.remove(animal.getPosition());
-            if((animal.getPosition().precedes(jungleField.upperRight) && animal.getPosition().follows(jungleField.lowerLeft)))
+            if(jungleField.isItJungle(animal.getPosition()))
                 jungleField.emptyJungleFields.remove(animal.getPosition());
     }
 
@@ -118,14 +118,15 @@ MapVisualizer visualMap;
         return visualMap.draw(this.lowerLeft,this.upperRight);
     }
 
+
     @Override
     public void positionChanged(Animal animal, Vector2D oldPosition) {
         animalsHash.removeMapping(oldPosition,animal);
         animalsHash.put(animal.getPosition(),animal);
         if(animalsHash.get(oldPosition).isEmpty()) emptyFields.add(oldPosition);
-        if((oldPosition.precedes(jungleField.upperRight) && oldPosition.follows(jungleField.lowerLeft))
-                && animalsHash.get(oldPosition).isEmpty() && !jungleField.emptyJungleFields.contains(oldPosition)) jungleField.emptyJungleFields.add(oldPosition);
-        if((animal.getPosition().precedes(jungleField.upperRight) && animal.getPosition().follows(jungleField.lowerLeft)))
+        if(jungleField.isItJungle(oldPosition) && animalsHash.get(oldPosition).isEmpty()
+                && !jungleField.emptyJungleFields.contains(oldPosition)) jungleField.emptyJungleFields.add(oldPosition);
+        if(jungleField.isItJungle(animal.getPosition()))
             jungleField.emptyJungleFields.remove(animal.getPosition());
         emptyFields.remove(animal.getPosition());
     }

@@ -16,16 +16,16 @@ public class Evolution {
         this.moveAnimalEnergy = moveEnergy;
         this.startAnimalNumber=startAnimalNumber;
         world = new WorldMap(width, height, jungleRatio, plantEnergy);
+        prepareAnimals();
     }
 
-    public void startEvolution() {
+    public void prepareAnimals() {
         for (int i = 0; i < startAnimalNumber; i++) {
             Animal newAnimal = new Animal(world, startAnimalEnergy, moveAnimalEnergy);
             world.place(newAnimal);
         }
-
-        while (!world.animalList.isEmpty()) {
-
+    }
+    public void nextDay(){
             removeDeadAnimals();
 
             moveAllAnimals();
@@ -35,9 +35,6 @@ public class Evolution {
             letAnimalsBreed();
 
             world.growNewPlants();
-
-            System.out.println(world.toString());
-        }
     }
     private void removeDeadAnimals(){
         List<Animal> animalToRemove=new ArrayList<>();

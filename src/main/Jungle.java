@@ -20,8 +20,6 @@ public class Jungle
             jungleHeight=mapHeight-2;
             jungleWidth=(int)Math.floor(jungleSurface/jungleHeight);
         }
-        System.out.println("Jungle width".concat(jungleWidth.toString()));
-        System.out.println("Jungle height".concat(jungleHeight.toString()));
         int lowerX=(int)Math.floor((mapWidth-jungleWidth)/2);
         int lowerY=(int)Math.floor((mapHeight-jungleHeight)/2);
         int upperX=(int)Math.floor((mapWidth-jungleWidth)/2)+jungleWidth-1;
@@ -32,6 +30,10 @@ public class Jungle
             for(int j=lowerY;j<=upperY;j++) this.emptyJungleFields.add(new Vector2D(i,j));
         }
         this.plantEnergy=energy;
+    }
+
+    public boolean isItJungle(Vector2D position){
+        return (position.precedes(this.upperRight) && position.follows(this.lowerLeft));
     }
 
 }
