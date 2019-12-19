@@ -20,11 +20,28 @@ public class VisualMap extends JFrame {
             parsedArguments.moveEnergy,parsedArguments.plantEnergy,parsedArguments.startAnimalNumber);
 
             Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-            int screenWidth=(int) Math.floor(screenSize.getHeight());
-            int screenHeight=(int) Math.floor(screenSize.getWidth());
-            frameHeight=(evolution.world.upperRight.y+1)*30;
-            frameWidth=(evolution.world.upperRight.x+1)*30;
-            mapPanel=new MainPanel(evolution.world.upperRight.y+1,evolution.world.upperRight.x+1,gap,evolution,frameWidth,frameHeight);
+            int screenWidth=(int) Math.floor(screenSize.getWidth());
+            int screenHeight=(int) Math.floor(screenSize.getHeight());
+            int width=evolution.world.upperRight.x+1;
+            int height=evolution.world.upperRight.y+1;
+            if(height==width){
+                frameWidth=screenHeight-50;
+                frameHeight=screenHeight-50;
+            }
+            else if(height>width){
+                frameHeight=screenHeight-50;
+                frameWidth=width*(frameHeight/height);
+            }
+            else{
+                frameHeight=screenHeight-50;
+                frameWidth=width*(frameHeight/height);
+                if(frameWidth>screenWidth) frameWidth=screenWidth;
+            }
+            System.out.println(frameHeight);
+            System.out.println(screenHeight);
+            System.out.println(frameWidth);
+            System.out.println(screenWidth);
+            mapPanel=new MainPanel(height,width,gap,evolution,frameWidth,frameHeight);
 
             frame.add(mapPanel);
 

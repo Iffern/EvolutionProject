@@ -4,6 +4,8 @@ import java.awt.*;
 import javax.swing.*;
 
 /**
+ *  CompoundIcon Class adapted from https://tips4java.wordpress.com/2009/03/29/compound-icon/
+ *  Author: Rob Camick
  *  The CompoundIcon will paint two, or more, Icons as a single Icon. The
  *  Icons are painted in the order in which they are added.
  *

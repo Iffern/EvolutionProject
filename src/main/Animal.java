@@ -1,11 +1,7 @@
 package main;
 
-import java.lang.reflect.Array;
-import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 public class Animal implements IMapElement{
     private MapDirection orientation;
@@ -71,14 +67,14 @@ public class Animal implements IMapElement{
     public Animal breed(Animal partner){
         Vector2D babyPosition=this.getMap().randomAdjacentPosition(this.getPosition());
         Integer startEnergy=this.animalEnergy.getCurrentEnergy()/4+partner.animalEnergy.getCurrentEnergy()/4;
-        Energy babyEnergy=new Energy(this.animalEnergy.getMaxEnergy(),startEnergy,this.animalEnergy.getMoveEnergy());
+        Energy babyEnergy=new Energy(partner.getAnimalEnergy().getStartEnergy(),startEnergy,this.animalEnergy.getMoveEnergy());
         this.animalEnergy.substractEnergy(this.animalEnergy.getCurrentEnergy()/4);
         partner.animalEnergy.substractEnergy(partner.animalEnergy.getCurrentEnergy()/4);
         return new Animal(this.map,babyPosition,babyEnergy,this,partner);
     }
 
     public boolean canBreed(){
-        return animalEnergy.getCurrentEnergy()>animalEnergy.getMaxEnergy()/2;
+        return animalEnergy.getCurrentEnergy()>animalEnergy.getStartEnergy()/2;
     }
 
     private void randomTurn(){

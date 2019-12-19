@@ -20,11 +20,12 @@ public class MainPanel extends JPanel {
         this.width=width;
         this.height=height;
         this.evolution = evolution;
-        this.setLayout(new GridLayout(width, height, gap, gap));
+        this.setLayout(new GridLayout(width,height, gap, gap));
 
-        for (int y = this.width-1; y >= 0; y--) {
-            for (int x = 0; x <= this.height-1; x++) {
-                JLabel newLabel = new JLabel("", JLabel.CENTER);
+        for (Integer y = this.width-1; y >= 0; y--) {
+            for (Integer x = 0; x <= this.height-1; x++) {
+                String position=x.toString().concat(" ").concat(y.toString());
+                JLabel newLabel = new JLabel(position, JLabel.CENTER);
                 newLabel.setOpaque(true);
                 newLabel.setForeground(Color.WHITE);
                 newLabel.setBackground(Color.DARK_GRAY);
@@ -60,23 +61,29 @@ public class MainPanel extends JPanel {
                 else if(plantOnPosition!=null)  icon = new CompoundIcon(CompoundIcon.Axis.Z_AXIS, 0, CompoundIcon.CENTER,
                         CompoundIcon.CENTER, background, resizeSmallIcon(MapElementsRepresentation.grassRepresentation));
                 else {
-                    icon= new CompoundIcon(CompoundIcon.Axis.Z_AXIS, 0, CompoundIcon.CENTER,
+                    if(animalsOnPosition.length==1)icon= new CompoundIcon(CompoundIcon.Axis.Z_AXIS, 0, CompoundIcon.CENTER,
                             CompoundIcon.CENTER, background, resizeSmallIcon(MapElementsRepresentation.animalRepresentation));
+                    else if(animalsOnPosition.length==2) icon=new CompoundIcon(CompoundIcon.Axis.Z_AXIS, 0, CompoundIcon.CENTER,
+                            CompoundIcon.CENTER, background, resizeBigIcon(MapElementsRepresentation.twoAnimalsRepresentation));
+                    else if(animalsOnPosition.length==3) icon=new CompoundIcon(CompoundIcon.Axis.Z_AXIS, 0, CompoundIcon.CENTER,
+                            CompoundIcon.CENTER, background, resizeBigIcon(MapElementsRepresentation.threeAnimalsRepresentation));
+                    else icon=new CompoundIcon(CompoundIcon.Axis.Z_AXIS, 0, CompoundIcon.CENTER,
+                            CompoundIcon.CENTER, background, resizeBigIcon(MapElementsRepresentation.manyAnimalsRepresentation));
                 }
                 label.setIcon(icon);
                 }
             }
         }
-        public ImageIcon resizeBigIcon(ImageIcon icon){
-            int iconWidth = (frameWidth-(width-1)*gap)/width;
-            int iconHeight = (frameHeight-(height-1)*gap)/height;
+        private ImageIcon resizeBigIcon(ImageIcon icon){
+            int iconWidth = (frameWidth-(height-1)*gap)/height;
+            int iconHeight = (frameHeight-(width-1)*gap)/width;
             Image scaleImage=icon.getImage().getScaledInstance(iconWidth, iconHeight, java.awt.Image.SCALE_SMOOTH);
             return new ImageIcon(scaleImage);
     }
 
-        public ImageIcon resizeSmallIcon(ImageIcon icon){
+        private ImageIcon resizeSmallIcon(ImageIcon icon){
             int iconWidth = (frameWidth-(width-1)*gap)/(2*width);
-            int iconHeight = (frameHeight-(height-1)*gap)/(2*height);
+            int iconHeight = (frameWidth-(height-1)*gap)/(2*height);
             Image scaleImage=icon.getImage().getScaledInstance(iconWidth, iconHeight, java.awt.Image.SCALE_SMOOTH);
             return new ImageIcon(scaleImage);
         }

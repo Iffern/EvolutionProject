@@ -2,39 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="648c13e7-2b2a-4c2b-b237-ab549be94af9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/CompoundIcon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/MainPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/MapElementsRepresentation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/VisualMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/initialArguments.json" beforeDir="false" afterPath="$PROJECT_DIR$/initialArguments.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/Animal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/Energy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/Evolution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/Genotype.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/Grass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/IMapElement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/IPositionChangeObserver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/IWorldMap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/Jungle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/MapDirection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/MapVisualizer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/MoveDirection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/OptionsParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/Vector2D.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/World.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2.agh/main/WorldMap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/lab2.agh/AnimalTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/lab2.agh/GrassFieldTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/lab2.agh/Vector2DTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/lab2.agh/tests/MapDirectionTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Evolution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Evolution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Jungle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Jungle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MoveDirection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WorldMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/AnimalTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/CompoundIcon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/CompoundIcon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Energy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Energy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MainPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/MapElementsRepresentation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MapElementsRepresentation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/VisualMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/VisualMap.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -230,8 +205,16 @@
       <workItem from="1576266999215" duration="49288000" />
       <workItem from="1576584568800" duration="911000" />
       <workItem from="1576586200370" duration="5951000" />
-      <workItem from="1576614564177" duration="21532000" />
+      <workItem from="1576614564177" duration="29550000" />
     </task>
+    <task id="LOCAL-00001" summary="visualiser method add">
+      <created>1576703030149</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576703030149</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,5 +232,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="visualiser method add" />
+    <option name="LAST_COMMIT_MESSAGE" value="visualiser method add" />
   </component>
 </project>
