@@ -6,12 +6,12 @@ import java.util.*;
 import java.util.List;
 
 public class Evolution {
-    int startAnimalEnergy;
-    int moveAnimalEnergy;
-    int startAnimalNumber;
+    double startAnimalEnergy;
+    double moveAnimalEnergy;
+    double startAnimalNumber;
     WorldMap world;
 
-    public Evolution(int width, int height, double jungleRatio, int startEnergy, int moveEnergy, int plantEnergy, int startAnimalNumber) {
+    public Evolution(int width, int height, double jungleRatio, double startEnergy, double moveEnergy, double plantEnergy, int startAnimalNumber) {
         this.startAnimalEnergy = startEnergy;
         this.moveAnimalEnergy = moveEnergy;
         this.startAnimalNumber=startAnimalNumber;
@@ -25,7 +25,8 @@ public class Evolution {
             world.place(newAnimal);
         }
     }
-    public void nextDay(){
+    public void run(){
+        while(!world.animalList.isEmpty()){
             removeDeadAnimals();
 
             moveAllAnimals();
@@ -34,7 +35,7 @@ public class Evolution {
 
             letAnimalsBreed();
 
-            world.growNewPlants();
+            world.growNewPlants();}
     }
     private void removeDeadAnimals(){
         List<Animal> animalToRemove=new ArrayList<>();
@@ -67,9 +68,9 @@ public class Evolution {
                     world.removePlant(food);
                 }
                 if(howManyAnimals>1){
-                    Comparator<Animal> compareEnergy = Comparator.comparingInt(ani -> ani.getAnimalEnergy().getCurrentEnergy());
+                    Comparator<Animal> compareEnergy = Comparator.comparingDouble(ani -> ani.getAnimalEnergy().getCurrentEnergy());
                     Arrays.sort(animals,compareEnergy);
-                    int maxEnergy=animals[animals.length-1].getAnimalEnergy().getCurrentEnergy();
+                    double maxEnergy=animals[animals.length-1].getAnimalEnergy().getCurrentEnergy();
                     int i=animals.length-1;
                     int strongest=0;
                     while(i>=0 && animals[i].getAnimalEnergy().getCurrentEnergy()==maxEnergy){
@@ -88,7 +89,7 @@ public class Evolution {
     private void letAnimalsBreed(){
         Animal mother=null;
         Animal father=null;
-        Animal baby=null;
+        Animal baby;
         for(Iterator<Vector2D> it= world.animalsHash.keySet().iterator();it.hasNext();){
             Vector2D animalPosition=it.next();
             Animal[] animals=world.animalsHash.get(animalPosition).toArray(new Animal[world.animalsHash.get(animalPosition).size()]);
@@ -98,7 +99,7 @@ public class Evolution {
                 father= animals[1];
             }
             else if(howManyAnimals>=2){
-                Comparator<Animal> compareEnergy = Comparator.comparingInt(ani -> ani.getAnimalEnergy().getCurrentEnergy());
+                Comparator<Animal> compareEnergy = Comparator.comparingDouble(ani -> ani.getAnimalEnergy().getCurrentEnergy());
                 Arrays.sort(animals,compareEnergy);
                 mother=animals[animals.length-1];
                 father=animals[animals.length-2];

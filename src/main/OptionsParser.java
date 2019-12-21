@@ -14,13 +14,13 @@ import java.util.Objects;
 public class OptionsParser {
     Integer width;
     Integer height;
-    Integer startEnergy;
-    Integer moveEnergy;
-    Integer plantEnergy;
+    Double startEnergy;
+    Double moveEnergy;
+    Double plantEnergy;
     Double jungleRatio;
     Integer startAnimalNumber;
 
-    public OptionsParser() {
+    public OptionsParser() throws IllegalArgumentException{
         JSONParser initialArguments = new JSONParser();
         try (FileReader reader = new FileReader("initialArguments.json")) {
             Object obj = initialArguments.parse(reader);
@@ -29,15 +29,16 @@ public class OptionsParser {
             this.width =longWidth.intValue();
             Long longHeight = (Long) data.get("height");
             this.height=longHeight.intValue();
-            Long longStartEnergy = (Long) data.get("startEnergy");
-            this.startEnergy = longStartEnergy.intValue();
-            Long longPlantEnergy = (Long) data.get("plantEnergy");
-            this.plantEnergy = longPlantEnergy.intValue();
-            Long longMoveEnergy = (Long) data.get("moveEnergy");
-            this.moveEnergy = longMoveEnergy.intValue();
+            this.startEnergy = (Double) data.get("startEnergy");
+            this.plantEnergy = (Double) data.get("plantEnergy");
+            this.moveEnergy = (Double) data.get("moveEnergy");
             this.jungleRatio = (Double) data.get("jungleRatio");
             Long longStartAnimalNumber = (Long) data.get("startAnimalNumber");
             this.startAnimalNumber = longStartAnimalNumber.intValue();
+            if(jungleRatio>1.0)  throw new IllegalArgumentException("Jungle ratio "+jungleRatio+" is too large. Please insert jungle ratio smaller " +
+                    "than 1.0");
+            if(moveEnergy>startEnergy) throw new IllegalArgumentException("Your animals have no chance to move. Please provide move energy smaller than " +
+                    "the start energy");
         } catch (ParseException | IOException e) {
             e.printStackTrace();
         }

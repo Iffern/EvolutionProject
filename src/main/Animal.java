@@ -11,7 +11,7 @@ public class Animal implements IMapElement{
 	private Energy animalEnergy;
     private List<IPositionChangeObserver> listOfObservers=new ArrayList<>();
 
-    public Animal(WorldMap map, Integer maxEnergy, Integer moveEnergy){
+    public Animal(WorldMap map, Double maxEnergy, Double moveEnergy){
         this.orientation=MapDirection.randomOrientation();
         this.position= map.randomPosition();
         this.map=map;
@@ -49,13 +49,10 @@ public class Animal implements IMapElement{
 
     public void move(){
         this.randomTurn();
-        this.animalEnergy.substractEnergy(this.animalEnergy.getMoveEnergy());
+        this.animalEnergy.subtractEnergy(this.animalEnergy.getMoveEnergy());
         Vector2D oldPosition=this.position;
         Vector2D newPosition=this.position.add(this.orientation.toUnitVector());
-        if(newPosition.x>this.map.upperRight.x) newPosition=newPosition.subtract(new Vector2D(this.map.upperRight.x+1,0));
-        if(newPosition.x<0) newPosition=newPosition.add(new Vector2D(this.map.upperRight.x+1,0));
-        if(newPosition.y>this.map.upperRight.y) newPosition=newPosition.subtract(new Vector2D(0,this.map.upperRight.y+1));
-        if(newPosition.y<0) newPosition=newPosition.add(new Vector2D(0,this.map.upperRight.y+1));
+        newPosition=this.map.positionOnMap(newPosition);
         this.position=newPosition;
         if(!oldPosition.equals(newPosition)) this.positionChanged(oldPosition);
     }
@@ -65,11 +62,13 @@ public class Animal implements IMapElement{
     }
 
     public Animal breed(Animal partner){
+        map.isBreeding(position);
         Vector2D babyPosition=this.getMap().randomAdjacentPosition(this.getPosition());
-        Integer startEnergy=this.animalEnergy.getCurrentEnergy()/4+partner.animalEnergy.getCurrentEnergy()/4;
+        babyPosition=this.map.positionOnMap(babyPosition);
+        Double startEnergy=this.animalEnergy.getCurrentEnergy()/4+partner.animalEnergy.getCurrentEnergy()/4;
         Energy babyEnergy=new Energy(partner.getAnimalEnergy().getStartEnergy(),startEnergy,this.animalEnergy.getMoveEnergy());
-        this.animalEnergy.substractEnergy(this.animalEnergy.getCurrentEnergy()/4);
-        partner.animalEnergy.substractEnergy(partner.animalEnergy.getCurrentEnergy()/4);
+        this.animalEnergy.subtractEnergy(this.animalEnergy.getCurrentEnergy()/4);
+        partner.animalEnergy.subtractEnergy(partner.animalEnergy.getCurrentEnergy()/4);
         return new Animal(this.map,babyPosition,babyEnergy,this,partner);
     }
 
@@ -83,16 +82,15 @@ public class Animal implements IMapElement{
     }
 
     public boolean isDead(){
-        if(this.animalEnergy.getCurrentEnergy()==0) return true;
+        if(this.animalEnergy.getCurrentEnergy()==0){
+            map.animalDied(this.getPosition());
+            return true;
+        }
         return false;
     }
 
     void addObserver(IPositionChangeObserver observer){
         listOfObservers.add(observer);
-    }
-
-    void removeObserver(IPositionChangeObserver observer){
-        listOfObservers.remove(observer);
     }
 
     private void positionChanged(Vector2D oldPosition) {

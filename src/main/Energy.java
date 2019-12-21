@@ -7,41 +7,41 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Energy {
-    private Integer startEnergy;
-    private Integer currentEnergy;
-    private Integer moveEnergy;
+    private Double startEnergy;
+    private Double currentEnergy;
+    private Double moveEnergy;
 
-    public Integer getCurrentEnergy() {
+    public Double getCurrentEnergy() {
         return currentEnergy;
     }
 
-    public Integer getStartEnergy() {
+    public Double getStartEnergy() {
         return startEnergy;
     }
 
-    public Integer getMoveEnergy() {
+    public Double getMoveEnergy() {
         return moveEnergy;
     }
 
 
-    public Energy(Integer maxEnergy, Integer moveEnergy){
+    public Energy(Double maxEnergy, Double moveEnergy){
         this.startEnergy=maxEnergy;
         this.currentEnergy=maxEnergy;
         this.moveEnergy=moveEnergy;
     }
 
-    public Energy(Integer maxEnergy, Integer currentEnergy, Integer moveEnergy){
+    public Energy(Double maxEnergy, Double currentEnergy, Double moveEnergy){
         this.startEnergy=maxEnergy;
         this.currentEnergy=currentEnergy;
         this.moveEnergy=moveEnergy;
     }
 
-    public void addEnergy(Integer energy){
+    public void addEnergy(Double energy){
         this.currentEnergy+= energy;
     }
 
-    public void substractEnergy(Integer substractedEnergy){
-        this.currentEnergy-=substractedEnergy;
-        if(this.currentEnergy<0) this.currentEnergy=0;
+    public void subtractEnergy(Double subtractedEnergy){
+        this.currentEnergy-=subtractedEnergy;
+        if(this.currentEnergy<0) this.currentEnergy=0.0;
     }
 }

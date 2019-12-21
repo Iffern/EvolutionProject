@@ -7,9 +7,9 @@ public class Jungle
 {   Vector2D upperRight;
     Vector2D lowerLeft;
     List<Vector2D> emptyJungleFields=new ArrayList<>();
-    int plantEnergy;
+    double plantEnergy;
 
-    public Jungle(int mapWidth, int mapHeight,double jungleRatio,int energy){
+    public Jungle(int mapWidth, int mapHeight,double jungleRatio,double energy){
         int mapSurface=mapWidth*mapHeight;
         double junglePercent=jungleRatio*100;
         Double jungleSurface=(mapSurface*junglePercent)/(100+junglePercent);
