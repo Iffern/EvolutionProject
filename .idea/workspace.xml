@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="648c13e7-2b2a-4c2b-b237-ab549be94af9" name="Default Changelist" comment=" visualiser is ready">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/initialArguments.json" beforeDir="false" afterPath="$PROJECT_DIR$/initialArguments.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Energy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Energy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Evolution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Evolution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Genotype.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Genotype.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Grass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Grass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/IMapElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/IMapElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MainPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MapDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MapDirection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/OptionsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/OptionsParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Vector2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Vector2D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/VisualMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/VisualMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/WorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/WorldMap.java" afterDir="false" />
-    </list>
+    <list default="true" id="648c13e7-2b2a-4c2b-b237-ab549be94af9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +201,7 @@
       <workItem from="1576584568800" duration="911000" />
       <workItem from="1576586200370" duration="5951000" />
       <workItem from="1576614564177" duration="29606000" />
-      <workItem from="1576823429397" duration="14904000" />
+      <workItem from="1576823429397" duration="14941000" />
     </task>
     <task id="LOCAL-00001" summary="visualiser method add">
       <created>1576703030149</created>
@@ -240,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576931696242</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="final version">
+      <created>1576957585571</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1576957585571</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +254,7 @@
     <MESSAGE value="visualiser method add" />
     <MESSAGE value="visualiser method improvement" />
     <MESSAGE value=" visualiser is ready" />
-    <option name="LAST_COMMIT_MESSAGE" value=" visualiser is ready" />
+    <MESSAGE value="final version" />
+    <option name="LAST_COMMIT_MESSAGE" value="final version" />
   </component>
 </project>
