@@ -110,7 +110,7 @@ public class WorldMap implements IPositionChangeObserver,IWorldMap {
         }
     }
 
-    public void growNewPlants() {
+     public void growNewPlants() {
         addJunglePlant();
         if (!emptyFields.isEmpty()) {
             Vector2D newPlantPosition;
@@ -134,7 +134,7 @@ public class WorldMap implements IPositionChangeObserver,IWorldMap {
         visualizer.mapPanel.mapEvent(position,jungleField.isItJungle(position),MapEvents.DEATH);
     }
 
-    public void isBreeding(Vector2D position){
+    public void animalIsBreeding(Vector2D position){
         visualizer.mapPanel.mapEvent(position,jungleField.isItJungle(position),MapEvents.BREED);
     }
 

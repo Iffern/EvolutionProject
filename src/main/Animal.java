@@ -58,11 +58,11 @@ public class Animal implements IMapElement{
     }
 
     public void eat(Grass food,int parts){
-        this.animalEnergy.addEnergy(food.plantEnergy/parts);
+        this.animalEnergy.addEnergy(food.getPlantEnergy()/parts);
     }
 
     public Animal breed(Animal partner){
-        map.isBreeding(position);
+        map.animalIsBreeding(position);
         Vector2D babyPosition=this.getMap().randomAdjacentPosition(this.getPosition());
         babyPosition=this.map.positionOnMap(babyPosition);
         Double startEnergy=this.animalEnergy.getCurrentEnergy()/4+partner.animalEnergy.getCurrentEnergy()/4;

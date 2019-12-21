@@ -1,7 +1,5 @@
 package main;
 
-import java.awt.*;
-import java.lang.reflect.Array;
 import java.util.*;
 import java.util.List;
 
@@ -16,10 +14,10 @@ public class Evolution {
         this.moveAnimalEnergy = moveEnergy;
         this.startAnimalNumber=startAnimalNumber;
         world = new WorldMap(width, height, jungleRatio, plantEnergy);
-        prepareAnimals();
+        prepareStartAnimals();
     }
 
-    public void prepareAnimals() {
+    public void prepareStartAnimals() {
         for (int i = 0; i < startAnimalNumber; i++) {
             Animal newAnimal = new Animal(world, startAnimalEnergy, moveAnimalEnergy);
             world.place(newAnimal);
@@ -37,6 +35,7 @@ public class Evolution {
 
             world.growNewPlants();}
     }
+
     private void removeDeadAnimals(){
         List<Animal> animalToRemove=new ArrayList<>();
         for (Animal animal : world.animalList) {
@@ -51,11 +50,13 @@ public class Evolution {
             }
         }
     }
+
     private void moveAllAnimals(){
         for(Animal animal: world.animalList) {
             animal.move();
         }
     }
+
     private void letAnimalsEat(){
         for(Vector2D animalPosition: world.animalsHash.keySet()){
             Animal[] animals=world.animalsHash.get(animalPosition).toArray(new Animal[world.animalsHash.get(animalPosition).size()]);
@@ -86,6 +87,7 @@ public class Evolution {
             }
         }
     }
+
     private void letAnimalsBreed(){
         Animal mother=null;
         Animal father=null;

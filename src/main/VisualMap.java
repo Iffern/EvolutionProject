@@ -5,9 +5,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class VisualMap extends JFrame {
-        public int gap=0;
-        public MainPanel mapPanel;
-        public int frameWidth ,frameHeight;
+        MainPanel mapPanel;
+        private int frameWidth ,frameHeight;
 
         public VisualMap(int width, int height) {
             JFrame frame=new JFrame();
@@ -32,11 +31,8 @@ public class VisualMap extends JFrame {
                     frameHeight=height*(frameWidth/width);
                 }
             }
-            System.out.println(frameHeight);
-            System.out.println(screenHeight);
-            System.out.println(frameWidth);
-            System.out.println(screenWidth);
-            mapPanel=new MainPanel(width,height,gap,frameWidth,frameHeight);
+            int gap = 0;
+            mapPanel=new MainPanel(width,height, gap,frameWidth,frameHeight);
 
             frame.add(mapPanel);
 

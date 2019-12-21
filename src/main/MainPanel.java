@@ -3,7 +3,6 @@ package main;
 import javax.swing.*;
 import javax.swing.Icon;
 import java.awt.*;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,21 +41,21 @@ public class MainPanel extends JPanel {
         ImageIcon newBackground = (isNewJungle ? MapElementsRepresentation.jungleRepresentation :
                 MapElementsRepresentation.savannahRepresentation);
         newBackground=resizeBigIcon(newBackground);
-        oldLabel.setIcon(computeIcon(oldBackground,animalsOnOld));
-        newLabel.setIcon(computeIcon(newBackground,animalsOnNew));
+        oldLabel.setIcon(makeCompoundIcon(oldBackground,animalsOnOld));
+        newLabel.setIcon(makeCompoundIcon(newBackground,animalsOnNew));
     }
 
-    Icon computeIcon(ImageIcon background, int numberOfAnimals){
+    private Icon makeCompoundIcon(ImageIcon background, int numberOfAnimals){
         Icon icon;
         if(numberOfAnimals==0) icon=background;
         else if(numberOfAnimals==1) icon=new CompoundIcon(CompoundIcon.Axis.Z_AXIS, 0, CompoundIcon.CENTER,
                 CompoundIcon.CENTER, background, resizeSmallIcon(MapElementsRepresentation.animalRepresentation));
         else if(numberOfAnimals==2) icon=new CompoundIcon(CompoundIcon.Axis.Z_AXIS, 0, CompoundIcon.CENTER,
-                CompoundIcon.CENTER, background, resizeSmallIcon(MapElementsRepresentation.twoAnimalsRepresentation));
+                CompoundIcon.CENTER, background, resizeBigIcon(MapElementsRepresentation.twoAnimalsRepresentation));
         else if(numberOfAnimals==3) icon=new CompoundIcon(CompoundIcon.Axis.Z_AXIS, 0, CompoundIcon.CENTER,
-                CompoundIcon.CENTER, background, resizeSmallIcon(MapElementsRepresentation.threeAnimalsRepresentation));
+                CompoundIcon.CENTER, background, resizeBigIcon(MapElementsRepresentation.threeAnimalsRepresentation));
         else icon=new CompoundIcon(CompoundIcon.Axis.Z_AXIS, 0, CompoundIcon.CENTER,
-                    CompoundIcon.CENTER, background, resizeSmallIcon(MapElementsRepresentation.manyAnimalsRepresentation));
+                    CompoundIcon.CENTER, background, resizeBigIcon(MapElementsRepresentation.manyAnimalsRepresentation));
         return icon;
     }
 

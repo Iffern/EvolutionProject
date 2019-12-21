@@ -6,7 +6,6 @@ public class Main {
             OptionsParser parsedArguments = new OptionsParser();
             Evolution evolution=new Evolution(parsedArguments.width,parsedArguments.height,parsedArguments.jungleRatio,parsedArguments.startEnergy,
                     parsedArguments.moveEnergy,parsedArguments.plantEnergy,parsedArguments.startAnimalNumber);
-            evolution.prepareAnimals();
             evolution.world.renderMainPanel();
             evolution.run();
         }

@@ -1,46 +1,40 @@
 package main;
 
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-
 public class Energy {
-    private Double startEnergy;
-    private Double currentEnergy;
-    private Double moveEnergy;
+    private double startEnergy;
+    private double currentEnergy;
+    private double moveEnergy;
 
-    public Double getCurrentEnergy() {
+    public double getCurrentEnergy() {
         return currentEnergy;
     }
 
-    public Double getStartEnergy() {
+    public double getStartEnergy() {
         return startEnergy;
     }
 
-    public Double getMoveEnergy() {
+    public double getMoveEnergy() {
         return moveEnergy;
     }
 
 
-    public Energy(Double maxEnergy, Double moveEnergy){
+    Energy(double maxEnergy, double moveEnergy){
         this.startEnergy=maxEnergy;
         this.currentEnergy=maxEnergy;
         this.moveEnergy=moveEnergy;
     }
 
-    public Energy(Double maxEnergy, Double currentEnergy, Double moveEnergy){
+    Energy(double maxEnergy, double currentEnergy, double moveEnergy){
         this.startEnergy=maxEnergy;
         this.currentEnergy=currentEnergy;
         this.moveEnergy=moveEnergy;
     }
 
-    public void addEnergy(Double energy){
+    void addEnergy(double energy){
         this.currentEnergy+= energy;
     }
 
-    public void subtractEnergy(Double subtractedEnergy){
+    void subtractEnergy(double subtractedEnergy){
         this.currentEnergy-=subtractedEnergy;
         if(this.currentEnergy<0) this.currentEnergy=0.0;
     }

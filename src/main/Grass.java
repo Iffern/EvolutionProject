@@ -1,10 +1,10 @@
 package main;
 
 public class Grass implements IMapElement {
-    Vector2D position;
-    Double plantEnergy;
+    private Vector2D position;
+    private double plantEnergy;
 
-    public Grass(Vector2D position, Double plantEnergy){
+    public Grass(Vector2D position, double plantEnergy){
         this.position=position;
         this.plantEnergy=plantEnergy;
     }
@@ -12,6 +12,8 @@ public class Grass implements IMapElement {
     public Vector2D getPosition(){
         return this.position;
     }
+
+    public double getPlantEnergy(){return this.plantEnergy;}
 
     public String toString(){
         return "* ";

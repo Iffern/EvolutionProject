@@ -1,7 +1,5 @@
 package main;
 
-
-import java.util.Map;
 import java.util.Random;
 
 public enum MapDirection {
@@ -36,17 +34,7 @@ public enum MapDirection {
         if(this==SOUTHWEST) return WEST;
         else return null;
     }
-    public MapDirection previous(){
-        if(this==NORTH) return NORTHWEST;
-        if(this==SOUTH) return SOUTHEAST;
-        if(this==WEST) return SOUTHWEST;
-        if(this==EAST) return NORTHEAST;
-		if(this==NORTHWEST) return WEST;
-        if(this==SOUTHEAST) return EAST;
-        if(this==NORTHEAST) return NORTH;
-        if(this==SOUTHWEST) return SOUTH;
-        else return null;
-    }
+
     public Vector2D toUnitVector(){
         if(this==NORTH) return new Vector2D(0,1);
         if(this==SOUTH) return new Vector2D(0,-1);
@@ -61,7 +49,6 @@ public enum MapDirection {
 
     public static MapDirection randomOrientation(){
         Random random=new Random();
-        MapDirection randomDirection= MapDirection.values()[random.nextInt(8)];
-        return randomDirection;
+        return MapDirection.values()[random.nextInt(8)];
     }
 }

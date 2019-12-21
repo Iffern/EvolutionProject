@@ -4,11 +4,8 @@ import java.util.*;
 import java.util.List;
 import java.util.Random;
 
-import static java.lang.Math.max;
-
-
 public class Genotype {
-	 List<Integer> genotypeArray = new ArrayList<>();
+	 private List<Integer> genotypeArray = new ArrayList<>();
 
     public Genotype(){
     	Random random=new Random();
@@ -78,10 +75,6 @@ public class Genotype {
 		}
 		Collections.sort(this.genotypeArray);
     }
-
-    public List<Integer> getGenotypeArray() {
-		return genotypeArray;
-	}
 
     public Integer randomizeOrientation(){
 		return this.genotypeArray.get(new Random().nextInt(this.genotypeArray.size()));

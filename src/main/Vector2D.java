@@ -1,7 +1,6 @@
 package main;
 
 import java.util.Objects;
-import java.util.Random;
 
 public class Vector2D {
         final int x;
@@ -13,7 +12,7 @@ public class Vector2D {
         }
 
         public String toString() {
-            return ("(" + Integer.toString(this.x) + "," + Integer.toString(this.y) + ")");
+            return ("(" + this.x + "," + this.y + ")");
         }
 
         public boolean precedes(Vector2D other) {
